@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERO COST — PKWU PROJECT</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f1e8;
+    color:#252b25;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:18px 7%;
+    background:#f5f1e8;
+    border-bottom:1px solid #ddd7ca;
+    z-index:10;
+}
+
+nav a{
+    text-decoration:none;
+    color:#252b25;
+    margin-right:25px;
+    font-size:14px;
+}
+
+.hero{
+    min-height:100vh;
+    padding:150px 8% 80px;
+    display:flex;
+    align-items:center;
+}
+
+.hero small{
+    color:#65715f;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:clamp(65px,13vw,150px);
+    line-height:.85;
+    margin:25px 0;
+    letter-spacing:-6px;
+}
+
+.hero h1 span{
+    color:#687763;
+}
+
+.hero p{
+    max-width:600px;
+    font-size:19px;
+    color:#666;
+}
+
+section{
+    padding:90px 8%;
+}
+
+.label{
+    color:#687763;
+    font-size:12px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:clamp(40px,6vw,75px);
+    line-height:1;
+    margin-bottom:35px;
+}
+
+.text{
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+    max-width:750px;
+}
+
+.dark{
+    background:#293329;
+    color:#f5f1e8;
+}
+
+.dark .text{
+    color:#c5c9c2;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.info{
+    border-top:1px solid #ccc7ba;
+}
+
+.info div{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+    border-bottom:1px solid #ccc7ba;
+}
+
+.info span:first-child{
+    color:#777;
+}
+
+.info span:last-child{
+    text-align:right;
+    font-weight:bold;
+}
+
+.product{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.product img{
+    width:100%;
+    max-height:600px;
+    object-fit:cover;
+}
+
+.price{
+    font-size:40px;
+    font-weight:bold;
+    margin:30px 0;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.tag{
+    border:1px solid #7b8577;
+    border-radius:30px;
+    padding:8px 14px;
+    font-size:11px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#e6e1d6;
+    padding:30px;
+    min-height:220px;
+}
+
+.card small{
+    color:#71806c;
+}
+
+.card h3{
+    font-size:25px;
+    margin:30px 0 10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+.materials{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:#bdb9ad;
+}
+
+.material{
+    background:#e1ddd2;
+    padding:25px;
+}
+
+.material h3{
+    margin:7px 0;
+}
+
+.material p{
+    color:#777;
+}
+
+.process{
+    border-top:1px solid #ccc7ba;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:20px;
+    padding:28px 0;
+    border-bottom:1px solid #ccc7ba;
+}
+
+.step-number{
+    color:#71806c;
+    font-weight:bold;
+}
+
+.step h3{
+    font-size:23px;
+    margin-bottom:5px;
+}
+
+.step p{
+    color:#666;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+.gallery img:first-child{
+    grid-column:span 2;
+    height:550px;
+}
+
+.videos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+video{
+    width:100%;
+    display:block;
+    background:#111;
+}
+
+.video-box{
+    background:#354035;
+    padding-bottom:18px;
+}
+
+.video-box h3{
+    padding:15px 18px 0;
+}
+
+.business{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.business-box{
+    border:1px solid #cbc6ba;
+    padding:30px;
+}
+
+.business-box h3{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.business-box p{
+    color:#666;
+}
+
+.conclusion{
+    max-width:850px;
+}
+
+.contact{
+    text-align:center;
+    padding:120px 8%;
+}
+
+.contact h2{
+    font-size:clamp(50px,8vw,100px);
+}
+
+.buttons a{
+    display:inline-block;
+    padding:14px 22px;
+    margin:5px;
+    text-decoration:none;
+    background:#293329;
+    color:white;
+}
+
+footer{
+    padding:30px 8%;
+    border-top:1px solid #ccc7ba;
+    color:#777;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* HP */
+
+@media(max-width:700px){
+
+    nav{
+        padding:16px 5%;
+    }
+
+    nav a{
+        margin-right:12px;
+        font-size:12px;
+    }
+
+    .hero{
+        padding:130px 6% 70px;
+    }
+
+    .hero h1{
+        font-size:72px;
+        letter-spacing:-4px;
+    }
+
+    section{
+        padding:65px 6%;
+    }
+
+    .about,
+    .product,
+    .business{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .materials,
+    .videos{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img,
+    .gallery img:first-child{
+        grid-column:auto;
+        height:350px;
+    }
+
+    .step{
+        grid-template-columns:50px 1fr;
+    }
+
+    footer{
+        display:block;
+        line-height:2;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#product">PRODUCT</a>
+<a href="#process">PROCESS</a>
+<a href="#gallery">GALLERY</a>
+<a href="#business">BUSINESS</a>
+</nav>
+
+<section class="hero">
+<div>
+<small>PKWU PROJECT • SMAN 6 DENPASAR</small>
+
+<h1>ZERO<br><span>COST.</span></h1>
+
+<p>
+Sebuah proyek sederhana yang mengubah barang-barang bekas
+menjadi produk yang memiliki fungsi, nilai estetika, dan nilai ekonomi.
+</p>
+</div>
+</section>
+
+
+<section id="about">
+<div class="about">
+
+<div>
+<div class="label">01 — ABOUT</div>
+<h2>Made from<br>what was left.</h2>
+
+<p class="text">
+Zero Cost adalah tempat pensil atau organizer alat tulis
+yang dibuat dari pemanfaatan barang bekas dan material alami.
+Produk ini menggabungkan kreativitas, fungsi, serta konsep reuse.
+</p>
+</div>
+
+<div class="info">
+
+<div>
+<span>Creator</span>
+<span>Kadek Permana Adiatmika<br>Putu Aby Yogiswara</span>
+</div>
+
+<div>
+<span>Class</span>
+<span>XII F3 IPA</span>
+</div>
+
+<div>
+<span>Absen</span>
+<span>16 & 29</span>
+</div>
+
+<div>
+<span>School</span>
+<span>SMAN 6 Denpasar</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="dark" id="product">
+<div class="product">
+
+<div>
+<div class="label">02 — PRODUCT</div>
+
+<h2>Simple.<br>Useful.<br>Reused.</h2>
+
+<p class="text">
+Produk menggunakan gelas kaca bekas yang sebagian besar
+bagian luarnya dilapisi rotan bekas. Bagian lainnya menggunakan
+pasir pantai halus yang juga mengisi bagian dalamnya.
+</p>
+
+<div class="price">Rp35.000</div>
+
+<div class="tags">
+<span class="tag">HANDMADE</span>
+<span class="tag">REUSE</span>
+<span class="tag">ECO PRODUCT</span>
+<span class="tag">STATIONERY</span>
+</div>
+</div>
+
+<img src="IMG-20260902-WA0032.jpg" alt="Zero Cost">
+
+</div>
+</section>
+
+
+<section>
+<div class="label">03 — CONCEPT</div>
+<h2>Three ideas.</h2>
+
+<div class="cards">
+
+<div class="card">
+<small>01</small>
+<h3>Reuse</h3>
+<p>
+Menggunakan kembali barang yang sebelumnya dianggap sudah tidak terpakai.
+</p>
+</div>
+
+<div class="card">
+<small>02</small>
+<h3>Function</h3>
+<p>
+Mengubah barang bekas menjadi benda yang memiliki fungsi
+dalam kehidupan sehari-hari.
+</p>
+</div>
+
+<div class="card">
+<small>03</small>
+<h3>Value</h3>
+<p>
+Memberikan nilai estetika dan nilai ekonomi pada material yang sederhana.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section>
+<div class="label">04 — MATERIALS</div>
+<h2>Nothing goes<br>to waste.</h2>
+
+<div class="materials">
+
+<div class="material">
+<small>USED</small>
+<h3>Newspaper</h3>
+<p>Koran bekas</p>
+</div>
+
+<div class="material">
+<small>USED</small>
+<h3>Rattan</h3>
+<p>Rotan bekas</p>
+</div>
+
+<div class="material">
+<small>USED</small>
+<h3>Can</h3>
+<p>Kaleng bekas</p>
+</div>
+
+<div class="material">
+<small>NATURAL</small>
+<h3>Ketapang Leaves</h3>
+<p>Daun ketapang</p>
+</div>
+
+<div class="material">
+<small>NATURAL</small>
+<h3>Beach Sand</h3>
+<p>Pasir pantai halus</p>
+</div>
+
+<div class="material">
+<small>SUPPORTING</small>
+<h3>Glue</h3>
+<p>Bahan pendukung</p>
+</div>
+
+</div>
+</section>
+
+
+<section id="process">
+<div class="label">05 — PROCESS</div>
+<h2>From waste<br>to useful.</h2>
+
+<div class="process">
+
+<div class="step">
+<div class="step-number">01</div>
+<div>
+<h3>Preparing the Glass</h3>
+<p>Menyiapkan gelas kaca bekas dan membersihkannya sebelum digunakan.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<div>
+<h3>Wrapping the Rattan</h3>
+<p>Sekitar 70% bagian luar gelas dilapisi rotan bekas.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<div>
+<h3>Adding the Sand</h3>
+<p>Bagian yang tersisa diberi pasir pantai halus hingga mencapai bagian tengah.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<div>
+<h3>Interior Filling</h3>
+<p>Pasir ditempatkan pada bagian dalam area yang tersisa.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">05</div>
+<div>
+<h3>Finishing</h3>
+<p>Produk diperiksa dan dapat ditambahkan dekorasi tambahan.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section id="gallery">
+<div class="label">06 — FINAL RESULT</div>
+<h2>The finished work.</h2>
+
+<div class="gallery">
+
+<img src="IMG-20260902-WA0032.jpg" alt="Zero Cost">
+<img src="IMG-20260902-WA0031.jpg" alt="Zero Cost">
+<img src="IMG-20260901-WA0028.jpg" alt="Zero Cost">
+<img src="IMG-20260901-WA0026.jpg" alt="Zero Cost">
+
+</div>
+</section>
+
+
+<section class="dark">
+<div class="label">07 — PROCESS DOCUMENTATION</div>
+<h2>Built by hand.</h2>
+
+<div class="videos">
+
+<div class="video-box">
+<video controls>
+<source src="VID-20260901-WA0014.mp4" type="video/mp4">
+</video>
+<h3>Process 01</h3>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="VID-20260901-WA0015.mp4" type="video/mp4">
+</video>
+<h3>Process 02</h3>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="VID-20260901-WA0016.mp4" type="video/mp4">
+</video>
+<h3>Process 03</h3>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="VID-20260901-WA0017.mp4" type="video/mp4">
+</video>
+<h3>Process 04</h3>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="VID-20260902-WA0021.mp4" type="video/mp4">
+</video>
+<h3>Process 05</h3>
+</div>
+
+</div>
+</section>
+
+
+<section>
+<div class="label">08 — PACKAGING</div>
+<h2>Second life<br>for everything.</h2>
+
+<p class="text">
+Kemasan menggunakan kaleng Kong Guan bekas lengkap dengan
+tutupnya yang dilapisi koran bekas.
+<br><br>
+Bagian dalam kaleng menggunakan potongan-potongan kertas bekas
+sebagai bantalan untuk mengurangi pergerakan dan benturan produk.
+<br><br>
+Daun ketapang juga direncanakan sebagai tambahan dekorasi
+pada bagian luar kemasan.
+</p>
+</section>
+
+
+<section id="business">
+<div class="label">09 — BUSINESS</div>
+<h2>Small cost.<br>Real value.</h2>
+
+<div class="business">
+
+<div class="business-box">
+<h3>Rp5.000</h3>
+<p>Modal utama untuk bahan pendukung seperti lem.</p>
+</div>
+
+<div class="business-box">
+<h3>± Rp5.000</h3>
+<p>Harga Pokok Produksi (HPP).</p>
+</div>
+
+<div class="business-box">
+<h3>± Rp30.000</h3>
+<p>Perkiraan keuntungan dari harga jual Rp35.000.</p>
+</div>
+
+<div class="business-box">
+<h3>Pelajar</h3>
+<p>
+Target market adalah pelajar sekolah yang membutuhkan
+tempat pensil atau organizer alat tulis.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section>
+<div class="conclusion">
+
+<div class="label">10 — CONCLUSION</div>
+
+<h2>Waste can become something meaningful.</h2>
+
+<p class="text">
+Zero Cost menunjukkan bahwa barang bekas tidak selalu berakhir
+sebagai sampah. Dengan kreativitas dan proses sederhana, material
+yang sudah tidak digunakan dapat diubah menjadi produk yang memiliki
+fungsi, nilai estetika, dan nilai ekonomi.
+<br><br>
+Melalui proyek ini, barang-barang bekas dari aspek organik dan
+anorganik dimanfaatkan kembali menjadi sebuah produk yang lebih
+bermakna dan bernilai.
+</p>
+
+</div>
+</section>
+
+
+<section class="contact">
+
+<div class="label">ZERO COST — PKWU PROJECT</div>
+
+<h2>THANKS FOR<br>VISITING.</h2>
+
+<p class="text" style="margin:0 auto 25px;">
+Kadek Permana Adiatmika · XII F3 IPA · SMAN 6 Denpasar
+</p>
+
+<div class="buttons">
+<a href="https://instagram.com/pertigaanbelokkan9" target="_blank">INSTAGRAM</a>
+<a href="https://wa.me/6287822675914" target="_blank">WHATSAPP</a>
+</div>
+
+</section>
+
+
+<footer>
+<span>ZERO COST.</span>
+<span>PKWU PROJECT · SMAN 6 DENPASAR</span>
+</footer>
+
+</body>
+  </html>
