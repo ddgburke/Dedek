@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZERO COST — PKWU PROJECT</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3efe6;
+    color:#202720;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* NAV */
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:99;
+    background:rgba(243,239,230,.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(32,39,32,.1);
+}
+
+.logo{
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.nav-links a{
+    color:#62695f;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#202720;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding:150px 7% 80px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-circle{
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:#dce0d5;
+    right:-180px;
+    top:100px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+}
+
+.eyebrow{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#71806c;
+    margin-bottom:28px;
+}
+
+.hero h1{
+    font-size:clamp(80px,16vw,190px);
+    line-height:.78;
+    letter-spacing:-10px;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:#71806c;
+}
+
+.hero-bottom{
+    margin-top:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    max-width:900px;
+}
+
+.hero-description{
+    max-width:530px;
+    color:#62675f;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.hero-number{
+    font-size:90px;
+    line-height:.8;
+    color:#d0cec3;
+    font-weight:bold;
+}
+
+/* GENERAL */
+
+section{
+    padding:110px 7%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:55px;
+}
+
+.label{
+    font-size:11px;
+    letter-spacing:3px;
+    color:#71806c;
+    font-weight:bold;
+}
+
+.title{
+    font-size:clamp(45px,7vw,90px);
+    line-height:.9;
+    letter-spacing:-5px;
+    margin-top:12px;
+}
+
+/* INTRO */
+
+.intro{
+    background:#283229;
+    color:#f3efe6;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:80px;
+    align-items:end;
+}
+
+.intro-big{
+    font-size:clamp(35px,5vw,65px);
+    line-height:1.05;
+    letter-spacing:-2px;
+}
+
+.intro-text{
+    color:#bfc5bc;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* IDENTITY */
+
+.identity-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.person{
+    padding:45px;
+    background:#e5e1d6;
+    position:relative;
+    min-height:250px;
+    transition:.35s;
+}
+
+.person:hover{
+    transform:translateY(-8px);
+}
+
+.person-number{
+    position:absolute;
+    top:30px;
+    right:35px;
+    font-size:55px;
+    color:#cbc8bd;
+    font-weight:bold;
+}
+
+.person small{
+    color:#71806c;
+    letter-spacing:2px;
+}
+
+.person h3{
+    font-size:32px;
+    margin-top:70px;
+}
+
+.person p{
+    color:#70756e;
+    margin-top:8px;
+}
+
+/* PRODUCT */
+
+.product-section{
+    background:#dcd9ce;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:70px;
+    align-items:center;
+}
+
+.product-info h2{
+    font-size:clamp(55px,8vw,105px);
+    line-height:.82;
+    letter-spacing:-6px;
+}
+
+.product-info p{
+    color:#626860;
+    line-height:1.8;
+    max-width:500px;
+    margin-top:30px;
+}
+
+.price{
+    font-size:45px;
+    font-weight:bold;
+    margin-top:30px;
+}
+
+.product-photo{
+    position:relative;
+}
+
+.product-photo img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+}
+
+.product-caption{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    padding:12px 17px;
+    background:#f3efe6;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* CONCEPT */
+
+.concept-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    border-top:1px solid #c9c5b9;
+}
+
+.concept{
+    padding:40px 30px 40px 0;
+    border-right:1px solid #c9c5b9;
+}
+
+.concept:not(:first-child){
+    padding-left:30px;
+}
+
+.concept:last-child{
+    border-right:0;
+}
+
+.concept-number{
+    font-size:12px;
+    color:#71806c;
+}
+
+.concept h3{
+    font-size:30px;
+    margin:45px 0 15px;
+}
+
+.concept p{
+    color:#696e67;
+    line-height:1.7;
+}
+
+/* MATERIAL */
+
+.material-section{
+    background:#283229;
+    color:#f3efe6;
+}
+
+.material-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    border-top:1px solid #566057;
+    border-bottom:1px solid #566057;
+}
+
+.material{
+    min-height:210px;
+    padding:25px 20px;
+    border-right:1px solid #566057;
+}
+
+.material:last-child{
+    border-right:0;
+}
+
+.material small{
+    color:#98a396;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.material h3{
+    margin-top:80px;
+    font-size:20px;
+}
+
+.material p{
+    color:#aeb6ab;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* PROCESS */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:80px;
+}
+
+.process-intro{
+    position:sticky;
+    top:120px;
+    height:max-content;
+}
+
+.process-intro p{
+    color:#686e67;
+    margin-top:25px;
+    line-height:1.8;
+}
+
+.steps{
+    border-top:1px solid #c8c4b8;
+}
+
+.step{
+    display:grid;
+    grid-template-columns:70px 1fr;
+    padding:32px 0;
+    border-bottom:1px solid #c8c4b8;
+}
+
+.step-num{
+    color:#71806c;
+    font-weight:bold;
+}
+
+.step h3{
+    font-size:27px;
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#686e67;
+    line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery-section{
+    background:#e6e1d6;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:18px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    background:#ccc;
+}
+
+.gallery-item img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.04);
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+}
+
+.gallery-item:first-child img{
+    height:738px;
+}
+
+/* VIDEOS */
+
+.video-section{
+    background:#202920;
+    color:#f3efe6;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.video-card{
+    background:#303a31;
+}
+
+.video-card video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    background:#111;
+}
+
+.video-info{
+    padding:20px;
+}
+
+.video-info small{
+    color:#9da99c;
+    letter-spacing:2px;
+}
+
+.video-info h3{
+    margin-top:7px;
+    font-size:22px;
+}
+
+/* PACKAGING */
+
+.packaging-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.packaging-text{
+    font-size:24px;
+    line-height:1.5;
+    max-width:700px;
+}
+
+.packaging-detail{
+    color:#696e67;
+    line-height:1.8;
+}
+
+/* BUSINESS */
+
+.business-section{
+    background:#dcd9ce;
+}
+
+.business-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.business-card{
+    background:#f3efe6;
+    padding:30px;
+    min-height:200px;
+}
+
+.business-card small{
+    color:#71806c;
+}
+
+.business-card h3{
+    font-size:34px;
+    margin:45px 0 10px;
+}
+
+.business-card p{
+    color:#686e67;
+    font-size:14px;
+}
+
+/* CONCLUSION */
+
+.conclusion{
+    max-width:1000px;
+}
+
+.conclusion h2{
+    font-size:clamp(50px,8vw,100px);
+    line-height:.9;
+    letter-spacing:-6px;
+}
+
+.conclusion p{
+    max-width:700px;
+    margin-top:35px;
+    color:#686e67;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#283229;
+    color:#f3efe6;
+    text-align:center;
+    padding:140px 7%;
+}
+
+.contact h2{
+    font-size:clamp(65px,11vw,140px);
+    line-height:.8;
+    letter-spacing:-8px;
+    margin:30px 0 40px;
+}
+
+.contact p{
+    color:#aeb6ab;
+}
+
+.buttons{
+    margin-top:35px;
+}
+
+.button{
+    display:inline-block;
+    padding:15px 25px;
+    margin:5px;
+    border:1px solid #788378;
+    color:#f3efe6;
+    font-size:12px;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#f3efe6;
+    color:#283229;
+}
+
+/* FOOTER */
+
+footer{
+    background:#202720;
+    color:#7f897e;
+    padding:25px 7%;
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav{
+        padding:17px 5%;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    section{
+        padding:75px 6%;
+    }
+
+    .hero{
+        padding:130px 6% 70px;
+    }
+
+    .hero-circle{
+        width:300px;
+        height:300px;
+        right:-150px;
+    }
+
+    .hero h1{
+        font-size:75px;
+        letter-spacing:-5px;
+    }
+
+    .hero-bottom{
+        display:block;
+        margin-top:45px;
+    }
+
+    .hero-number{
+        display:none;
+    }
+
+    .intro-grid,
+    .product-grid,
+    .process-grid,
+    .packaging-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .identity-grid{
+        grid-template-columns:1fr;
+    }
+
+    .concept-grid{
+        grid-template-columns:1fr;
+    }
+
+    .concept,
+    .concept:not(:first-child){
+        padding:30px 0;
+        border-right:0;
+        border-bottom:1px solid #c9c5b9;
+    }
+
+    .material-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .material{
+        border-bottom:1px solid #566057;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item:first-child{
+        grid-row:auto;
+    }
+
+    .gallery-item img,
+    .gallery-item:first-child img{
+        height:350px;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .business-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-intro{
+        position:static;
+    }
+
+    .contact h2{
+        letter-spacing:-5px;
+    }
+
+    footer{
+        display:block;
+        line-height:2;
+    }
+}
+
+@media(max-width:480px){
+
+    .business-grid{
+        grid-template-columns:1fr;
+    }
+
+    .material-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .person{
+        padding:30px;
+    }
+
+    .person h3{
+        font-size:27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<div class="nav">
+    <div class="logo">ZERO COST.</div>
+
+    <div class="nav-links">
+        <a href="#about">ABOUT</a>
+        <a href="#product">PRODUCT</a>
+        <a href="#process">PROCESS</a>
+        <a href="#gallery">WORK</a>
+        <a href="#business">BUSINESS</a>
+    </div>
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-circle"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            PKWU PROJECT · SMAN 6 DENPASAR
+        </div>
+
+        <h1>
+            ZERO<br>
+            <span>COST.</span>
+        </h1>
+
+        <div class="hero-bottom">
+
+            <p class="hero-description">
+                Sebuah proyek sederhana yang mengubah barang-barang
+                bekas menjadi produk yang memiliki fungsi, nilai estetika,
+                dan nilai ekonomi.
+            </p>
+
+            <div class="hero-number">01</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="label">01 — THE PEOPLE</div>
+            <h2 class="title">Who made it.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="identity-grid">
+
+        <div class="person">
+
+            <div class="person-number">16</div>
+
+            <small>CREATOR / 01</small>
+
+            <h3>Kadek Permana<br>Adiatmika</h3>
+
+            <p>Absen 16 · XII F3 IPA</p>
+
+        </div>
+
+
+        <div class="person">
+
+            <div class="person-number">29</div>
+
+            <small>CREATOR / 02</small>
+
+            <h3>Putu Aby<br>Yogiswara</h3>
+
+            <p>Absen 29 · XII F3 IPA</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<div class="container">
+
+    <div class="intro-grid">
+
+        <div>
+
+            <div class="label">02 — THE IDEA</div>
+
+            <p class="intro-big">
+                What if something considered waste
+                could become something worth keeping?
+            </p>
+
+        </div>
+
+        <p class="intro-text">
+            Zero Cost adalah tempat pensil atau organizer alat tulis
+            yang dibuat dari pemanfaatan barang bekas dan material alami.
+            Produk ini dibuat dengan menggabungkan material sederhana
+            menjadi sebuah benda yang memiliki fungsi dan nilai.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCT -->
+
+<section class="product-section" id="product">
+
+<div class="container">
+
+    <div class="product-grid">
+
+        <div class="product-info">
+
+            <div class="label">03 — THE PRODUCT</div>
+
+            <h2>
+                SIMPLE.<br>
+                USEFUL.<br>
+                REUSED.
+            </h2>
+
+            <p>
+                Produk menggunakan gelas kaca bekas yang sebagian besar
+                bagian luarnya dilapisi rotan bekas. Bagian lainnya
+                menggunakan pasir pantai halus yang juga mengisi
+                bagian dalamnya.
+            </p>
+
+            <div class="price">
+                Rp35.000
+            </div>
+
+        </div>
+
+
+        <div class="product-photo">
+
+            <img
+                src="IMG-20260902-WA0032.jpg"
+                alt="Produk Zero Cost"
+            >
+
+            <div class="product-caption">
+                ZERO COST / FINAL PRODUCT
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONCEPT -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="label">04 — CONCEPT</div>
+            <h2 class="title">Three reasons.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="concept-grid">
+
+        <div class="concept">
+
+            <div class="concept-number">01</div>
+
+            <h3>REUSE</h3>
+
+            <p>
+                Menggunakan kembali barang yang sebelumnya
+                dianggap sudah tidak terpakai.
+            </p>
+
+        </div>
+
+
+        <div class="concept">
+
+            <div class="concept-number">02</div>
+
+            <h3>FUNCTION</h3>
+
+            <p>
+                Mengubah barang bekas menjadi benda yang
+                memiliki fungsi dalam kehidupan sehari-hari.
+            </p>
+
+        </div>
+
+
+        <div class="concept">
+
+            <div class="concept-number">03</div>
+
+            <h3>VALUE</h3>
+
+            <p>
+                Memberikan nilai estetika dan nilai ekonomi
+                pada material yang sederhana.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- MATERIAL -->
+
+<section class="material-section">
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="label">05 — MATERIALS</div>
+            <h2 class="title">Nothing wasted.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="material-grid">
+
+        <div class="material">
+            <small>USED</small>
+            <h3>Newspaper</h3>
+            <p>Koran bekas</p>
+        </div>
+
+        <div class="material">
+            <small>USED</small>
+            <h3>Rattan</h3>
+            <p>Rotan bekas</p>
+        </div>
+
+        <div class="material">
+            <small>USED</small>
+            <h3>Can</h3>
+            <p>Kaleng bekas</p>
+        </div>
+
+        <div class="material">
+            <small>NATURAL</small>
+            <h3>Ketapang</h3>
+            <p>Daun ketapang</p>
+        </div>
+
+        <div class="material">
+            <small>NATURAL</small>
+            <h3>Beach Sand</h3>
+            <p>Pasir pantai</p>
+        </div>
+
+        <div class="material">
+            <small>SUPPORT</small>
+            <h3>Glue</h3>
+            <p>Bahan pendukung</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process">
+
+<div class="container">
+
+    <div class="process-grid">
+
+        <div class="process-intro">
+
+            <div class="label">06 — PROCESS</div>
+
+            <h2 class="title">
+                From waste<br>
+                to useful.
+            </h2>
+
+            <p>
+                Setiap bagian dibuat melalui proses sederhana
+                dengan memanfaatkan material yang sudah tersedia.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-num">01</div>
+
+                <div>
+                    <h3>Preparing the Glass</h3>
+                    <p>
+                        Menyiapkan gelas kaca bekas dan membersihkannya
+                        sebelum digunakan.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="step-num">02</div>
+
+                <div>
+                    <h3>Wrapping the Rattan</h3>
+                    <p>
+                        Sekitar 70% bagian luar gelas dilapisi
+                        rotan bekas.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="step-num">03</div>
+
+                <div>
+                    <h3>Adding the Sand</h3>
+                    <p>
+                        Bagian yang tersisa diberi pasir pantai
+                        halus hingga mencapai bagian tengah.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="step-num">04</div>
+
+                <div>
+                    <h3>Interior Filling</h3>
+                    <p>
+                        Pasir ditempatkan pada bagian dalam
+                        area yang tersisa untuk membentuk
+                        karakter produk.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="step">
+                <div class="step-num">05</div>
+
+                <div>
+                    <h3>Finishing</h3>
+                    <p>
+                        Produk diperiksa kembali dan dapat
+                        ditambahkan dekorasi tambahan.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery-section" id="gallery">
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="label">07 — FINAL RESULT</div>
+            <h2 class="title">The finished work.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="IMG-20260902-WA0032.jpg"
+                alt="Zero Cost"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="IMG-20260902-WA0031.jpg"
+                alt="Zero Cost"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="IMG-20260901-WA0028.jpg"
+                alt="Zero Cost"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="IMG-20260901-WA0026.jpg"
+                alt="Zero Cost"
+            >
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- VIDEOS -->
+
+<section class="video-section">
+
+<div class="container">
+
+    <div class="section-top">
+
+        <div>
+            <div class="label">08 — DOCUMENTATION</div>
+            <h2 class="title">Made by hand.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="video-grid">
+
+        <div class="video-card">
+
+            <video controls preload="metadata">
+                <source
+                    src="VID-20260901-WA0014.mp4"
+                    type="video/mp4"
+                >
+            </video>
+
+            <div class="video-info">
+                <small>PROCESS / 01</small>
+                <h3>Preparation</h3>
+            </div>
+
+        </div>
+
+
+        <div class="video-card">
+
+            <video controls preload="metadata">
+      
