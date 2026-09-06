@@ -1,591 +1,1585 @@
-                    <strong>Used Newspaper</strong>
-                    <small>BEKAS</small>
-                </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
 
-                <div class="material-row">
-                    <span>02</span>
-                    <strong>Used Rattan</strong>
-                    <small>BEKAS</small>
-                </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZERO COST — PKWU Project</title>
 
-                <div class="material-row">
-                    <span>03</span>
-                    <strong>Used Can</strong>
-                    <small>BEKAS</small>
-                </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-                <div class="material-row">
-                    <span>04</span>
-                    <strong>Ketapang Leaves</strong>
-                    <small>NATURAL</small>
-                </div>
-
-                <div class="material-row">
-                    <span>05</span>
-                    <strong>Fine Beach Sand</strong>
-                    <small>NATURAL</small>
-                </div>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-                <div class="material-row">
-                    <span>06</span>
-                    <strong>Glue</strong>
-                    <small>SUPPORTING</small>
-                </div>
-
-            </div>
 
-        </div>
+<style>
 
-    </div>
+/* =========================
+   BASIC
+========================= */
 
-</section>
+:root{
+    --cream:#f4f0e8;
+    --paper:#fbf9f4;
+    --beige:#e8dfd0;
 
+    --dark:#303c34;
+    --dark2:#202a24;
 
-<!-- PROCESS -->
-<section class="process section-dark" id="process">
+    --text:#202521;
+    --muted:#777b74;
 
-    <div class="container">
+    --brown:#8a7458;
+    --brown2:#b9a486;
 
-        <div class="section-top reveal">
-            <span>06 — THE PROCESS</span>
-            <small>FROM MATERIAL TO ARTWORK</small>
-        </div>
+    --line:#d8d0c3;
+}
 
-        <div class="process-heading reveal">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            <h2>
-                Made by hand,<br>
-                <em>step by step.</em>
-            </h2>
+html{
+    scroll-behavior:smooth;
+}
 
-            <p>
-                Di balik hasil akhirnya terdapat proses sederhana
-                yang dilakukan secara bertahap dan manual.
-            </p>
+body{
+    background:var(--cream);
+    color:var(--text);
+    font-family:"DM Sans",sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-        </div>
+img,
+video{
+    display:block;
+    width:100%;
+}
 
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-        <div class="process-list">
+.container{
+    width:min(1180px,88%);
+    margin:auto;
+}
 
-            <div class="process-row reveal">
-                <div class="process-no">01</div>
+section{
+    padding:120px 0;
+}
 
-                <div class="process-content">
-                    <h3>Preparing the Glass</h3>
-                    <p>
-                        Menyiapkan gelas kaca bekas dan membersihkannya
-                        sebelum digunakan sebagai dasar produk.
-                    </p>
-                </div>
-            </div>
+.section-light{
+    background:var(--cream);
+}
 
+.section-dark{
+    background:var(--dark);
+    color:#fffdf8;
+}
 
-            <div class="process-row reveal">
-                <div class="process-no">02</div>
+.section-beige{
+    background:var(--beige);
+}
 
-                <div class="process-content">
-                    <h3>Wrapping the Rattan</h3>
-                    <p>
-                        Sekitar 70% bagian luar gelas dilapisi
-                        menggunakan rotan bekas.
-                    </p>
-                </div>
-            </div>
+em{
+    font-family:"Playfair Display",serif;
+    font-style:italic;
+    font-weight:400;
+}
 
 
-            <div class="process-row reveal">
-                <div class="process-no">03</div>
+/* =========================
+   NAVBAR
+========================= */
 
-                <div class="process-content">
-                    <h3>Adding the Sand</h3>
-                    <p>
-                        Bagian yang tersisa diberi pasir pantai
-                        halus hingga mencapai bagian tengah.
-                    </p>
-                </div>
-            </div>
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:72px;
 
+    padding:0 5%;
 
-            <div class="process-row reveal">
-                <div class="process-no">04</div>
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-                <div class="process-content">
-                    <h3>Interior Filling</h3>
-                    <p>
-                        Pasir juga ditempatkan pada bagian dalam
-                        area yang tersisa untuk membentuk karakter
-                        produk.
-                    </p>
-                </div>
-            </div>
+    z-index:999;
 
+    background:rgba(244,240,232,.9);
+    backdrop-filter:blur(15px);
 
-            <div class="process-row reveal">
-                <div class="process-no">05</div>
+    border-bottom:1px solid rgba(32,37,33,.08);
+}
 
-                <div class="process-content">
-                    <h3>Finishing</h3>
-                    <p>
-                        Produk diperiksa kembali dan dapat diberikan
-                        dekorasi tambahan agar tampil lebih menarik.
-                    </p>
-                </div>
-            </div>
+.logo{
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:4px;
+}
 
-        </div>
+.logo span{
+    color:var(--brown);
+}
 
-    </div>
+.nav-links{
+    display:flex;
+    gap:32px;
+}
 
-</section>
+.nav-links a{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#666b65;
+    transition:.3s;
+}
 
+.nav-links a:hover{
+    color:var(--brown);
+}
 
-<!-- VIDEO PROCESS -->
-<section class="video-section section-light">
+.nav-year{
+    font-size:8px;
+    letter-spacing:2px;
+    color:#898c85;
+}
 
-    <div class="container">
 
-        <div class="section-top reveal">
-            <span>07 — PROCESS DOCUMENTATION</span>
-            <small>THE MAKING</small>
-        </div>
+/* =========================
+   HERO
+========================= */
 
-        <div class="video-heading reveal">
+.hero{
+    min-height:100vh;
 
-            <h2>
-                See the work<br>
-                <em>behind the result.</em>
-            </h2>
+    padding:130px 6% 70px;
 
-            <p>
-                Beberapa cuplikan proses pengerjaan Zero Cost,
-                mulai dari persiapan material hingga proses
-                pembentukan produk.
-            </p>
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
 
-        </div>
+    align-items:center;
+    gap:70px;
 
+    position:relative;
+    overflow:hidden;
 
-        <div class="video-grid">
+    background:var(--cream);
+}
 
-            <div class="video-card reveal">
+.hero::before{
+    content:"ZERO";
 
-                <div class="video-number">01</div>
+    position:absolute;
+    right:-60px;
+    bottom:-80px;
 
-                <video controls playsinline preload="metadata">
-                    <source src="VID-20260901-WA0014.mp4" type="video/mp4">
-                    Browser kamu tidak mendukung video.
-                </video>
+    font-size:27vw;
+    line-height:.7;
 
-                <div class="video-title">
-                    <span>PROCESS 01</span>
-                    <h3>Project Documentation</h3>
-                </div>
+    font-weight:700;
 
-            </div>
+    color:rgba(48,60,52,.035);
 
+    pointer-events:none;
+}
 
-            <div class="video-card reveal">
+.hero-content{
+    position:relative;
+    z-index:2;
+}
 
-                <div class="video-number">02</div>
+.eyebrow{
+    color:var(--brown);
 
-                <video controls playsinline preload="metadata">
-                    <source src="VID-20260901-WA0015.mp4" type="video/mp4">
-                    Browser kamu tidak mendukung video.
-                </video>
+    font-size:9px;
+    letter-spacing:4px;
 
-                <div class="video-title">
-                    <span>PROCESS 02</span>
-                    <h3>Material Preparation</h3>
-                </div>
+    margin-bottom:25px;
+}
 
-            </div>
+.hero h1{
+    font-family:"Playfair Display",serif;
 
+    font-size:clamp(80px,11vw,155px);
 
-            <div class="video-card reveal">
+    line-height:.78;
 
-                <div class="video-number">03</div>
+    letter-spacing:-7px;
 
-                <video controls playsinline preload="metadata">
-                    <source src="VID-20260901-WA0016.mp4" type="video/mp4">
-                    Browser kamu tidak mendukung video.
-                </video>
+    font-weight:500;
+}
 
-                <div class="video-title">
-                    <span>PROCESS 03</span>
-                    <h3>Making Process</h3>
-                </div>
+.hero h1 span{
+    color:var(--brown);
+}
 
-            </div>
+.hero-description{
+    max-width:430px;
 
+    margin-top:48px;
 
-            <div class="video-card reveal">
+    color:#70746e;
 
-                <div class="video-number">04</div>
+    font-size:14px;
+}
 
-                <video controls playsinline preload="metadata">
-                    <source src="VID-20260901-WA0017.mp4" type="video/mp4">
-                    Browser kamu tidak mendukung video.
-                </video>
+.hero-bottom{
+    margin-top:35px;
 
-                <div class="video-title">
-                    <span>PROCESS 04</span>
-                    <h3>Crafting the Product</h3>
-                </div>
+    display:flex;
+    align-items:center;
 
-            </div>
+    gap:40px;
+}
 
+.explore{
+    display:flex;
+    align-items:center;
+    gap:20px;
 
-            <div class="video-card reveal">
+    padding-bottom:8px;
 
-                <div class="video-number">05</div>
+    border-bottom:1px solid var(--text);
 
-                <video controls playsinline preload="metadata">
-                    <source src="VID-20260901-WA0021.mp4" type="video/mp4">
-                    Browser kamu tidak mendukung video.
-                </video>
+    font-size:9px;
+    letter-spacing:2px;
 
-                <div class="video-title">
-                    <span>PROCESS 05</span>
-                    <h3>Final Process</h3>
-                </div>
+    transition:.3s;
+}
 
-            </div>
+.explore span{
+    transition:.3s;
+}
 
-        </div>
+.explore:hover{
+    color:var(--brown);
+    border-color:var(--brown);
+}
 
-    </div>
+.explore:hover span{
+    transform:translateX(4px);
+}
 
-</section>
+.hero-photo{
+    position:relative;
+    z-index:2;
 
+    max-width:500px;
 
-<!-- PACKAGING -->
-<section class="packaging section-beige">
+    margin-left:auto;
+}
 
-    <div class="container">
+.hero-photo::after{
+    content:"";
 
-        <div class="section-top reveal">
-            <span>08 — PACKAGING</span>
-            <small>SECOND LIFE</small>
-        </div>
+    position:absolute;
 
-        <div class="packaging-grid">
+    top:18px;
+    left:18px;
 
-            <div class="packaging-quote reveal">
+    width:100%;
+    height:100%;
 
-                <span>SECOND LIFE.</span>
+    border:1px solid var(--brown2);
 
-                <h2>
-                    Even the<br>
-                    packaging<br>
-                    has a story.
-                </h2>
+    z-index:-1;
+}
 
-            </div>
+.hero-photo img{
+    aspect-ratio:4/5;
 
-            <div class="packaging-text reveal">
+    object-fit:cover;
 
-                <p class="large">
-                    Kemasan menggunakan kaleng Kong Guan bekas
-                    lengkap dengan tutupnya yang dilapisi koran bekas.
-                </p>
+    background:#ddd6ca;
+}
 
-                <p>
-                    Bagian dalam kaleng menggunakan potongan-potongan
-                    kertas bekas sebagai bantalan untuk mengurangi
-                    pergerakan dan benturan produk selama penyimpanan
-                    atau pengemasan.
-                </p>
+.photo-label{
+    position:absolute;
 
-                <p>
-                    Daun ketapang juga direncanakan sebagai tambahan
-                    dekorasi pada bagian luar kemasan.
-                </p>
+    left:0;
+    right:0;
+    bottom:0;
 
-            </div>
+    padding:18px;
 
-        </div>
+    color:white;
 
-    </div>
+    font-size:8px;
+    letter-spacing:2px;
 
-</section>
+    background:linear-gradient(
+        transparent,
+        rgba(20,25,21,.7)
+    );
+}
 
 
-<!-- ADVANTAGE -->
-<section class="statement section-light">
+/* =========================
+   MARQUEE
+========================= */
 
-    <div class="container">
+.marquee{
+    overflow:hidden;
 
-        <div class="statement-inner reveal">
+    background:var(--dark);
 
-            <div class="section-top">
-                <span>09 — THE VALUE</span>
-                <small>WHY ZERO COST?</small>
-            </div>
+    color:#eee9df;
 
-            <h2>
-                Almost everything<br>
-                gets a <em>second life.</em>
-            </h2>
+    padding:19px 0;
+}
 
-            <p>
-                Keunggulan utama Zero Cost adalah pemanfaatan kembali
-                material bekas dari berbagai sumber untuk menghasilkan
-                produk yang memiliki fungsi dan nilai jual.
-            </p>
+.marquee-track{
+    display:flex;
+    align-items:center;
 
-        </div>
+    width:max-content;
 
-    </div>
+    gap:25px;
 
-</section>
+    animation:move 28s linear infinite;
+}
 
+.marquee span{
+    font-size:9px;
+    letter-spacing:4px;
+}
 
-<!-- BUSINESS -->
-<section class="business section-dark" id="business">
+.marquee i{
+    color:var(--brown2);
+    font-style:normal;
+}
 
-    <div class="container">
+@keyframes move{
 
-        <div class="section-top reveal">
-            <span>10 — BUSINESS PLAN</span>
-            <small>FROM WASTE TO BUSINESS</small>
-        </div>
+    from{
+        transform:translateX(0);
+    }
 
-        <div class="business-heading reveal">
+    to{
+        transform:translateX(-30%);
+    }
 
-            <h2>
-                A simple idea<br>
-                with <em>potential.</em>
-            </h2>
+}
 
-        </div>
 
+/* =========================
+   SECTION HEADER
+========================= */
 
-        <div class="business-grid">
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-            <div class="business-card reveal">
+    padding-bottom:20px;
 
-                <span>01 / CAPITAL</span>
+    border-bottom:1px solid var(--line);
 
-                <h3>Modal</h3>
+    margin-bottom:70px;
+}
 
-                <strong>Rp5.000</strong>
+.section-dark .section-head{
+    border-color:rgba(255,255,255,.15);
+}
 
-                <p>
-                    Modal utama digunakan untuk membeli bahan
-                    pendukung seperti lem.
-                </p>
+.section-head span{
+    font-size:9px;
+    letter-spacing:3px;
+    font-weight:700;
+}
 
-            </div>
+.section-head small{
+    font-size:8px;
+    letter-spacing:2px;
+    color:var(--muted);
+}
 
+.section-dark .section-head small{
+    color:#aab2ab;
+}
 
-            <div class="business-card reveal">
 
-                <span>02 / PRODUCTION</span>
+/* =========================
+   ABOUT
+========================= */
 
-                <h3>HPP</h3>
+.about-grid{
+    display:grid;
 
-                <strong>±Rp5.000</strong>
+    grid-template-columns:1fr 1fr;
 
-                <p>
-                    Perkiraan harga pokok produksi berdasarkan
-                    material yang digunakan.
-                </p>
+    gap:100px;
+}
 
-            </div>
+.big-title{
+    font-family:"Playfair Display",serif;
 
+    font-size:clamp(52px,6vw,82px);
 
-            <div class="business-card reveal">
+    line-height:.9;
 
-                <span>03 / PROFIT</span>
+    letter-spacing:-3px;
+}
 
-                <h3>Profit</h3>
+.about-text{
+    padding-top:5px;
+}
 
-                <strong>±Rp30.000</strong>
+.about-text .lead{
+    font-size:20px;
 
-                <p>
-                    Perkiraan keuntungan kotor dari satu produk
-                    dengan harga jual Rp35.000.
-                </p>
+    line-height:1.5;
 
-            </div>
+    margin-bottom:25px;
 
-        </div>
+    color:var(--text);
+}
 
+.about-text p{
+    color:var(--muted);
 
-        <div class="business-details reveal">
+    font-size:14px;
 
-            <div>
-                <span>TARGET MARKET</span>
+    margin-bottom:20px;
+}
 
-                <p>
-                    Pelajar sekolah yang membutuhkan tempat
-                    pensil atau organizer alat tulis.
-                </p>
-            </div>
+.line{
+    width:65px;
+    height:1px;
 
-            <div>
-                <span>MARKETING</span>
+    background:var(--brown);
 
-                <p>
-                    Instagram, WhatsApp, promosi langsung kepada
-                    teman sekolah, serta konten foto dan video
-                    proses pembuatan.
-                </p>
-            </div>
+    margin:35px 0;
+}
 
-            <div>
-                <span>POTENTIAL</span>
+.info-mini{
+    display:grid;
 
-                <p>
-                    Produk handmade dengan konsep reuse yang
-                    dapat dikembangkan melalui variasi desain
-                    dan dekorasi.
-                </p>
-            </div>
+    grid-template-columns:1fr 1fr;
 
-        </div>
+    gap:25px;
+}
 
-    </div>
+.info-mini span{
+    display:block;
 
-</section>
+    font-size:8px;
+    letter-spacing:2px;
 
+    color:var(--muted);
 
-<!-- MEANING -->
-<section class="meaning section-light">
+    margin-bottom:6px;
+}
 
-    <div class="container">
+.info-mini strong{
+    font-size:13px;
+}
 
-        <div class="meaning-grid">
 
-            <div class="reveal">
+/* =========================
+   CREATOR
+========================= */
 
-                <div class="section-top">
-                    <span>11 — MEANING</span>
-                    <small>THE MESSAGE</small>
-                </div>
+.creator-grid{
+    display:grid;
 
-                <h2>
-                    More than<br>
-                    just a <em>product.</em>
-                </h2>
+    grid-template-columns:1fr 1fr;
 
-            </div>
+    gap:100px;
+}
 
-            <div class="meaning-text reveal">
+.creator-title h2{
+    font-family:"Playfair Display",serif;
 
-                <p class="large">
-                    Zero Cost menunjukkan bahwa barang bekas
-                    tidak selalu berakhir sebagai sampah.
-                </p>
+    font-size:clamp(52px,6vw,82px);
 
-                <p>
-                    Dengan kreativitas dan proses sederhana,
-                    material yang sudah tidak digunakan dapat
-                    diubah menjadi produk yang memiliki fungsi,
-                    nilai estetika, dan nilai ekonomi.
-                </p>
+    line-height:.9;
 
-                <p>
-                    Melalui proyek ini, barang-barang bekas dari
-                    aspek organik dan anorganik dimanfaatkan kembali
-                    menjadi sebuah produk yang lebih bermakna
-                    dan bernilai.
-                </p>
+    letter-spacing:-3px;
+}
 
-            </div>
+.creator-title p{
+    color:#adb5ae;
 
-        </div>
+    max-width:430px;
 
-    </div>
+    font-size:14px;
 
-</section>
+    margin-top:30px;
+}
 
+.creator-data{
+    border-top:1px solid rgba(255,255,255,.16);
+}
 
-<!-- CLOSING -->
-<section class="closing section-dark">
+.data-row{
+    display:grid;
 
-    <div class="closing-bg">ZERO</div>
+    grid-template-columns:130px 1fr;
 
-    <div class="container">
+    padding:20px 0;
 
-        <div class="closing-content reveal">
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
 
-            <span class="closing-label">
-                END OF PROJECT
-            </span>
+.data-row span{
+    color:#929d95;
 
-            <h2>
-                Simple idea.<br>
-                <em>Meaningful result.</em>
-            </h2>
+    font-size:8px;
 
-            <p>
-                Creativity doesn't always need something new.
-                Sometimes, it only needs a second look
-                at what we already have.
-            </p>
+    letter-spacing:2px;
+}
 
-            <a href="#home" class="back-top">
-                BACK TO TOP ↑
-            </a>
+.data-row strong{
+    font-size:14px;
 
-        </div>
+    font-weight:500;
+}
 
-    </div>
 
-</section>
+/* =========================
+   ARTWORK
+========================= */
 
+.artwork-intro{
+    display:grid;
 
-<!-- CONTACT -->
-<footer class="footer" id="contact">
+    grid-template-columns:1fr 1fr;
 
-    <div class="footer-top">
+    gap:100px;
 
-        <div class="footer-brand">
-            ZERO<br>
-            <span>COST.</span>
-        </div>
+    margin-bottom:70px;
+}
 
-        <div class="footer-info">
+.artwork-intro p{
+    align-self:end;
 
-            <div>
-                <span>CREATED BY</span>
-                <p>Kadek Permana Adiatmika<br>
-                Putu Aby Yogiswara</p>
-            </div>
+    color:var(--muted);
 
-            <div>
-                <span>CLASS</span>
-                <p>XIIF3 IPA<br>
-                SMAN 6 Denpasar</p>
-            </div>
+    max-width:430px;
 
-        </div>
+    font-size:14px;
+}
 
-    </div>
+.main-artwork{
+    display:grid;
 
+    grid-template-columns:1.35fr .65fr;
 
-    <div class="footer-bottom">
+    background:var(--paper);
+}
 
-        <a href="https://instagram.com/pertigaanbelokkan9"
-           target="_blank">
-            @pertigaanbelokkan9
-        </a>
+.main-artwork-image{
+    position:relative;
 
-        <span>ZERO COST — PKWU PROJECT</span>
+    overflow:hidden;
+}
 
-        <a href="https://wa.me/6287822675914"
-           target="_blank">
-            0878-2267-5914
-        </a>
+.main-artwork-image img{
+    height:100%;
 
-    </div>
+    min-height:600px;
 
-</footer>
+    object-fit:cover;
 
+    transition:1s ease;
+}
 
-<script src="script.js"></script>
+.main-artwork:hover img{
+    transform:scale(1.025);
+}
 
-</body>
-    </html>
+.art-number{
+    position:absolute;
+
+    top:18px;
+    left:18px;
+
+    padding:8px 10px;
+
+    background:rgba(250,248,243,.9);
+
+    font-size:8px;
+    letter-spacing:2px;
+}
+
+.artwork-info{
+    padding:50px 42px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.artwork-info .label{
+    color:var(--brown);
+
+    font-size:8px;
+
+    letter-spacing:3px;
+}
+
+.artwork-info h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:39px;
+
+    line-height:1.05;
+
+    margin:20px 0;
+}
+
+.artwork-info p{
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-top:30px;
+}
+
+.tags span{
+    padding:7px 9px;
+
+    border:1px solid var(--line);
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+}
+
+.art-gallery{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+
+    margin-top:14px;
+}
+
+.art-item{
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:1/1;
+
+    background:#ddd5c8;
+}
+
+.art-item img{
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s ease;
+}
+
+.art-item:hover img{
+    transform:scale(1.05);
+}
+
+.art-item span{
+    position:absolute;
+
+    left:12px;
+    bottom:12px;
+
+    padding:6px 8px;
+
+    color:white;
+
+    background:rgba(30,35,31,.7);
+
+    font-size:8px;
+}
+
+
+/* =========================
+   CONCEPT
+========================= */
+
+.concept-title{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+
+    margin-bottom:60px;
+}
+
+.concept-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    border-top:1px solid rgba(32,37,33,.15);
+}
+
+.concept-card{
+    padding:40px 30px;
+
+    border-right:1px solid rgba(32,37,33,.15);
+}
+
+.concept-card:last-child{
+    border-right:none;
+}
+
+.concept-number{
+    color:var(--brown);
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    margin-bottom:60px;
+}
+
+.concept-card h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+}
+
+.concept-card p{
+    color:#6e726c;
+
+    max-width:280px;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   MATERIALS
+========================= */
+
+.material-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+}
+
+.material-title h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+}
+
+.material-title p{
+    color:var(--muted);
+
+    max-width:400px;
+
+    margin-top:30px;
+
+    font-size:14px;
+}
+
+.material-list{
+    border-top:1px solid var(--line);
+}
+
+.material{
+    display:grid;
+
+    grid-template-columns:40px 1fr 80px;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.material span{
+    color:var(--brown);
+
+    font-size:8px;
+}
+
+.material strong{
+    font-size:13px;
+
+    font-weight:500;
+}
+
+.material small{
+    text-align:right;
+
+    color:#858880;
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-title{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+
+    margin-bottom:65px;
+}
+
+.process-title h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+}
+
+.process-title p{
+    color:#adb5ae;
+
+    max-width:420px;
+
+    align-self:end;
+
+    font-size:14px;
+}
+
+.process-list{
+    border-top:1px solid rgba(255,255,255,.16);
+}
+
+.process{
+    display:grid;
+
+    grid-template-columns:90px 1fr;
+
+    gap:45px;
+
+    padding:30px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.process-number{
+    color:var(--brown2);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+}
+
+.process h3{
+    font-size:18px;
+
+    font-weight:500;
+
+    margin-bottom:5px;
+}
+
+.process p{
+    color:#adb5ae;
+
+    font-size:13px;
+
+    max-width:620px;
+}
+
+
+/* =========================
+   VIDEOS
+========================= */
+
+.video-title{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+
+    margin-bottom:60px;
+}
+
+.video-title h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+}
+
+.video-title p{
+    color:var(--muted);
+
+    align-self:end;
+
+    max-width:430px;
+
+    font-size:14px;
+}
+
+.video-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.video-card{
+    position:relative;
+
+    background:var(--paper);
+
+    border:1px solid var(--line);
+
+    overflow:hidden;
+}
+
+.video-card video{
+    aspect-ratio:9/13;
+
+    object-fit:cover;
+
+    background:#222a25;
+}
+
+.video-no{
+    position:absolute;
+
+    z-index:2;
+
+    top:12px;
+    left:12px;
+
+    padding:7px 9px;
+
+    background:rgba(250,248,243,.9);
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.video-caption{
+    padding:18px 20px 22px;
+}
+
+.video-caption span{
+    color:var(--brown);
+
+    font-size:7px;
+
+    letter-spacing:2px;
+}
+
+.video-caption h3{
+    font-size:14px;
+
+    margin-top:5px;
+
+    font-weight:500;
+}
+
+
+/* =========================
+   PACKAGING
+========================= */
+
+.packaging-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+}
+
+.packaging-title h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+}
+
+.packaging-title span{
+    color:var(--brown);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+.packaging-text{
+    align-self:center;
+}
+
+.packaging-text p{
+    color:#6f736d;
+
+    font-size:14px;
+
+    margin-bottom:22px;
+}
+
+.packaging-text .lead{
+    color:var(--text);
+
+    font-size:20px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   VALUE
+========================= */
+
+.value h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(58px,8vw,105px);
+
+    line-height:.88;
+
+    letter-spacing:-4px;
+
+    margin-bottom:30px;
+}
+
+.value p{
+    color:var(--muted);
+
+    max-width:600px;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   BUSINESS
+========================= */
+
+.business-title{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+
+    margin-bottom:65px;
+}
+
+.business-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.business-card{
+    min-height:250px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.3s ease;
+}
+
+.business-card:hover{
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.035);
+}
+
+.business-card span{
+    color:#98a29b;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+}
+
+.business-card h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    margin:18px 0 10px;
+}
+
+.business-card strong{
+    display:block;
+
+    color:var(--brown2);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:32px;
+
+    font-weight:400;
+
+    margin-bottom:12px;
+}
+
+.business-card p{
+    color:#adb5ae;
+
+    font-size:12px;
+}
+
+.business-details{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:50px;
+
+    margin-top:60px;
+
+    padding-top:30px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.business-details span{
+    color:var(--brown2);
+
+    display:block;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+}
+
+.business-details p{
+    color:#adb5ae;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   MEANING
+========================= */
+
+.meaning-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+}
+
+.meaning-grid h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:.9;
+}
+
+.meaning-text{
+    align-self:center;
+}
+
+.meaning-text p{
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:20px;
+}
+
+.meaning-text .lead{
+    color:var(--text);
+
+    font-size:21px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing{
+    min-height:75vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.closing::before{
+    content:"ZERO";
+
+    position:absolute;
+
+    right:-70px;
+    bottom:-70px;
+
+    font-size:28vw;
+
+    line-height:.7;
+
+    color:rgba(255,255,255,.025);
+
+    font-weight:700;
+}
+
+.closing-content{
+    position:relative;
+
+    z-index:2;
+}
+
+.closing-label{
+    color:var(--brown2);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+.closing h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(60px,9vw,125px);
+
+    line-height:.82;
+
+    letter-spacing:-5px;
+
+    margin:25px 0 35px;
+}
+
+.closing p{
+    color:#adb5ae;
+
+    max-width:480px;
+
+    font-size:14px;
+}
+
+.top{
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding-bottom:8px;
+
+    border-bottom:1px solid rgba(255,255,255,.4);
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.top:hover{
+    color:var(--brown2);
+
+    border-color:var(--brown2);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#1b211d;
+
+    color:white;
+
+    padding:60px 5% 25px;
+}
+
+.footer-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding-bottom:50px;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.footer-logo{
+    font-family:"Playfair Display",serif;
+
+    font-size:52px;
+
+    line-height:.8;
+}
+
+.footer-logo span{
+    color:var(--brown2);
+}
+
+.footer-info{
+    display:flex;
+
+    gap:70px;
+}
+
+.footer-info span{
+    display:block;
+
+    color:#89938c;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+    margin-bottom:7px;
+}
+
+.footer-info p{
+    color:#c2c8c3;
+
+    font-size:11px;
+}
+
+.footer-bottom{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding-top:20px;
+
+    color:#858d87;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+}
+
+.footer-bottom a:hover{
+    color:var(--brown2);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(28px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    section{
+        padding:85px 0;
+    }
+
+    .navbar{
+        height:65px;
+    }
+
+    .nav-links,
+    .nav-year{
+        display:none;
+    }
+
+    .hero{
+        padding:120px 7% 75px;
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+    }
+
+    .hero h1{
+        font-size:72px;
+
+        letter-spacing:-4px;
+    }
+
+    .hero-description{
+        margin-top:35px;
+    }
+
+    .hero-photo{
+        width:88%;
+
+        margin:auto;
+    }
+
+    .about-grid,
+    .creator-grid,
+    .artwork-intro,
+    .material-grid,
+    .process-title,
+    .video-title,
+    .packaging-grid,
+    .meaning-grid{
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .main-artwork{
+        grid-template-columns:1fr;
+    }
+
+    .main-artwork-image img{
+        min-height:430px;
+    }
+
+    .artwork-info{
+        padding:38px 25px 45px;
+    }
+
+    .art-gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .concept-grid{
+        grid-template-columns:1fr;
+    }
+
+    .concept-card{
+        border-right:0;
+
+        border-bottom:1px solid rgba(32,37,33,.15);
+    }
+
+    .concept-card:last-child{
+        border-bottom:0;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .business-grid,
+    .business-details{
+        grid-template-columns:1fr;
+    }
+
+    .business-details{
+        gap:25px;
+    }
+
+    .process{
+        grid-template-columns:55px 1fr;
+
+        gap:20px;
+    }
+
+    .footer-top{
+        display:block;
+    }
+
+    .footer-info{
+        margin-top:45px;
+
+        gap:35px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        gap:12px;
+
+        align-items:flex-start;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:62px;
+    }
+
+    .art-gallery,
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-mini{
+        grid-template-columns:1fr;
+    }
+
+    .section-head small{
+        display:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <a href="#home" class="logo">
+        ZERO <span>COST</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#about">ABOUT</a>
+
+        <
