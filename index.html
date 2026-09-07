@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ZERO COST — PKWU PROJECT</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,226 +23,257 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f2efe7;
-    color:#202820;
-    line-height:1.6;
+    font-family:'DM Sans', sans-serif;
+    background:#f3f0e8;
+    color:#252b23;
+    line-height:1.7;
+    overflow-x:hidden;
 }
+
+h1,h2,h3{
+    font-family:'DM Serif Display', serif;
+    font-weight:400;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* ================= NAVBAR ================= */
 
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:70px;
+    height:72px;
     padding:0 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(242,239,231,.94);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #d2d2c8;
-    z-index:99;
-    animation:down .7s ease;
+    z-index:1000;
+
+    background:rgba(243,240,232,.90);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(37,43,35,.08);
 }
 
 .logo{
-    font-family:Georgia,serif;
-    font-size:19px;
-    letter-spacing:2px;
-    font-weight:bold;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2.5px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#555d53;
-    font-size:11px;
-    letter-spacing:1px;
-    margin-left:25px;
-    transition:.3s;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-nav a:hover{
-    color:#78866c;
+.nav-links a{
+    font-size:12px;
+    font-weight:600;
+    color:#62695d;
+    transition:.3s ease;
 }
+
+.nav-links a:hover{
+    color:#252b23;
+}
+
+
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
     padding:150px 8% 100px;
     display:flex;
     align-items:center;
-    border-bottom:1px solid #c9cbc1;
-    animation:appear 1s ease;
 }
 
-.hero-inner{
-    width:100%;
+.hero-content{
+    max-width:950px;
 }
 
 .eyebrow{
-    color:#718064;
+    font-family:'DM Sans',sans-serif;
     font-size:11px;
-    letter-spacing:4px;
-    margin-bottom:30px;
+    letter-spacing:3.5px;
+    font-weight:700;
+    color:#727d69;
+    margin-bottom:24px;
 }
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(80px,15vw,185px);
-    font-weight:500;
-    line-height:.78;
-    letter-spacing:-9px;
+    font-size:clamp(70px,13vw,155px);
+    line-height:.82;
+    letter-spacing:-5px;
+    color:#283225;
 }
 
-.hero p{
-    max-width:600px;
-    margin-top:55px;
-    color:#626960;
-    font-size:17px;
+.hero h1 span{
+    color:#7d896f;
 }
 
-.hero-info{
-    margin-top:55px;
+.hero-desc{
+    max-width:560px;
+    margin-top:38px;
+
+    font-family:'DM Sans',sans-serif;
+    font-size:14px;
+    line-height:1.8;
+    letter-spacing:.1px;
+
+    color:#686e65;
+}
+
+.hero-line{
+    width:80px;
+    height:1px;
+    background:#7d896f;
+    margin-top:32px;
+}
+
+
+/* ================= QUICK CONTACT ================= */
+
+.quick-contact{
+    position:absolute;
+    right:8%;
+    bottom:65px;
+
     display:flex;
-    gap:50px;
-    color:#777d73;
-    font-size:10px;
-    letter-spacing:2px;
+    flex-direction:column;
+    gap:9px;
 }
+
+.quick-label{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#8a9085;
+    margin-bottom:3px;
+}
+
+.quick-person{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:11px;
+    color:#596055;
+
+    transition:.3s ease;
+}
+
+.quick-person::before{
+    content:"";
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#7d896f;
+    transition:.3s ease;
+}
+
+.quick-person:hover{
+    color:#252b23;
+    transform:translateX(5px);
+}
+
+.quick-person:hover::before{
+    transform:scale(1.5);
+}
+
+
+/* ================= GENERAL ================= */
 
 section{
     padding:110px 8%;
 }
 
-.dark{
-    background:#293329;
-    color:#f2efe7;
-}
-
-.light{
-    background:#e6e4da;
-}
-
-.section-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    border-bottom:1px solid #c6c9bf;
-    padding-bottom:25px;
-    margin-bottom:55px;
-}
-
-.dark .section-top{
-    border-color:rgba(255,255,255,.16);
-}
-
-.num{
+.section-label{
     font-size:10px;
     letter-spacing:3px;
-    color:#718064;
+    font-weight:700;
+    color:#7b866f;
+    margin-bottom:13px;
 }
 
-.dark .num{
-    color:#abb7a2;
-}
-
-h2{
-    font-family:Georgia,serif;
-    font-size:clamp(40px,5vw,65px);
-    line-height:1;
-    font-weight:500;
+.section-title{
+    font-size:clamp(40px,6vw,70px);
+    line-height:1.02;
+    color:#293126;
+    margin-bottom:42px;
 }
 
 
-/* TEAM */
+/* ================= IDENTITY ================= */
 
-.team{
+.identity{
+    background:#e5e1d5;
+}
+
+.identity-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
-.person{
-    padding:40px 35px;
-    border-bottom:1px solid rgba(255,255,255,.15);
-    transition:.4s;
+.info-card{
+    background:#f3f0e8;
+    padding:35px;
+    border:1px solid rgba(37,43,35,.08);
+    transition:.35s ease;
 }
 
-.person:nth-child(odd){
-    border-right:1px solid rgba(255,255,255,.15);
+.info-card:hover{
+    transform:translateY(-6px);
 }
 
-.person:hover{
-    background:#323d32;
-    transform:translateY(-3px);
+.info-card h3{
+    font-size:25px;
+    margin-bottom:13px;
 }
 
-.person small{
-    color:#aab6a1;
-    letter-spacing:2px;
+.info-card p{
+    font-family:'DM Sans',sans-serif;
+    color:#686e65;
+    font-size:13px;
+    line-height:1.65;
+}
+
+.number{
+    color:#7b866f;
     font-size:10px;
-}
-
-.person h3{
-    font-family:Georgia,serif;
-    font-size:27px;
-    font-weight:500;
-    margin:15px 0 5px;
-}
-
-.person p{
-    color:#bdc5b9;
-    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:11px;
 }
 
 
-/* PRODUCT */
+/* ================= PRODUCT ================= */
 
-.product{
+.product-grid{
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:1fr 1fr;
     gap:70px;
     align-items:center;
 }
 
-.product-photo{
-    overflow:hidden;
-}
-
-.product-photo img{
-    width:100%;
-    height:600px;
-    object-fit:cover;
-    display:block;
-    transition:.7s;
-}
-
-.product-photo:hover img{
-    transform:scale(1.04);
-}
-
-.product-text small{
-    color:#718064;
-    letter-spacing:3px;
-}
-
-.product-text h3{
-    font-family:Georgia,serif;
-    font-size:clamp(40px,5vw,65px);
-    font-weight:500;
-    line-height:1;
-    margin:20px 0 30px;
-}
-
 .product-text p{
-    color:#626960;
+    max-width:560px;
+    color:#686e65;
+    font-size:13px;
+    line-height:1.85;
     margin-bottom:18px;
-    font-size:15px;
 }
 
 .price{
-    font-family:Georgia,serif;
-    font-size:31px;
-    margin:30px 0;
+    font-size:27px;
+    font-weight:700;
+    color:#293126;
+    margin:25px 0;
 }
 
 .tags{
@@ -246,524 +283,521 @@ h2{
 }
 
 .tag{
-    border:1px solid #b8beb0;
-    padding:8px 13px;
-    font-size:10px;
-    letter-spacing:2px;
-    transition:.3s;
+    border:1px solid #aeb5a5;
+    padding:6px 12px;
+
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:1.4px;
+
+    color:#62695d;
 }
 
-.tag:hover{
-    background:#293329;
-    color:white;
+.product-image{
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+
+    filter:saturate(.88);
+
+    transition:.7s ease;
+}
+
+.product-image:hover img{
+    transform:scale(1.025);
 }
 
 
-/* CONCEPT */
-
-.concepts{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    border-top:1px solid #bdc0b6;
-    border-bottom:1px solid #bdc0b6;
-}
+/* ================= CONCEPT ================= */
 
 .concept{
-    padding:40px 30px;
-    min-height:260px;
-    border-right:1px solid #bdc0b6;
-    transition:.4s;
+    background:#293126;
+    color:#f3f0e8;
 }
 
-.concept:last-child{
-    border-right:none;
+.concept .section-title{
+    color:#f3f0e8;
 }
 
-.concept:hover{
-    background:#f0eee6;
-}
-
-.concept span{
-    color:#78866c;
-    font-size:11px;
-    letter-spacing:3px;
-}
-
-.concept h3{
-    font-family:Georgia,serif;
-    font-size:30px;
-    font-weight:500;
-    margin:50px 0 12px;
-}
-
-.concept p{
-    color:#666c63;
-    font-size:14px;
-}
-
-
-/* MATERIAL */
-
-.materials{
+.concept-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.concept-card{
+    padding:34px;
+    border:1px solid rgba(243,240,232,.14);
+    transition:.4s ease;
+}
+
+.concept-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(243,240,232,.32);
+}
+
+.concept-card h3{
+    font-size:27px;
+    margin-bottom:13px;
+}
+
+.concept-card p{
+    color:#c8cbbf;
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* ================= MATERIALS ================= */
+
+.materials-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
 }
 
 .material{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    padding:25px 5px;
-    border-bottom:1px solid #c5c8bd;
-    transition:.3s;
-}
-
-.material:nth-child(odd){
-    margin-right:35px;
+    padding:23px 25px;
+    background:#e5e1d5;
+    transition:.3s ease;
 }
 
 .material:hover{
-    padding-left:15px;
+    transform:translateY(-4px);
 }
 
-.material-number{
-    color:#78866c;
-    font-size:11px;
-    letter-spacing:2px;
+.material strong{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:4px;
 }
 
-.material-name{
-    font-size:15px;
-}
-
-.material-type{
-    margin-left:auto;
-    color:#858b82;
+.material span{
     font-size:10px;
-    letter-spacing:1px;
+    color:#7a8075;
 }
 
 
-/* PROCESS */
+/* ================= PROCESS ================= */
 
-.steps{
-    max-width:1000px;
+.process{
+    background:#e5e1d5;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
 }
 
 .step{
-    display:grid;
-    grid-template-columns:90px 1fr;
-    gap:25px;
-    padding:35px 0;
-    border-bottom:1px solid rgba(255,255,255,.15);
-    transition:.4s;
+    padding:25px;
+    background:#f3f0e8;
+    min-height:235px;
+    transition:.35s ease;
 }
 
 .step:hover{
-    padding-left:15px;
+    transform:translateY(-6px);
 }
 
 .step-number{
-    font-family:Georgia,serif;
-    color:#aeb9a4;
-    font-size:24px;
+    font-family:'DM Serif Display',serif;
+    font-size:32px;
+    color:#8a957d;
+    margin-bottom:17px;
 }
 
 .step h3{
-    font-size:21px;
-    font-weight:500;
-    margin-bottom:7px;
+    font-size:19px;
+    line-height:1.25;
+    margin-bottom:11px;
 }
 
 .step p{
-    color:#bec6bb;
-    font-size:14px;
+    font-size:11px;
+    line-height:1.75;
+    color:#6b7167;
 }
 
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 
-.gallery{
+.gallery-grid{
     display:grid;
-    grid-template-columns:1.3fr .7fr;
-    gap:18px;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
 }
 
 .gallery-item{
     overflow:hidden;
-    background:#dddacf;
-}
-
-.gallery-item:first-child{
-    grid-row:span 2;
+    background:#ddd8ca;
 }
 
 .gallery-item img{
     width:100%;
-    height:100%;
-    min-height:300px;
+    height:420px;
     object-fit:cover;
     display:block;
-    transition:.7s;
+    transition:.7s ease;
 }
 
 .gallery-item:hover img{
-    transform:scale(1.04);
+    transform:scale(1.035);
 }
 
 
-/* VIDEOS */
+/* ================= VIDEOS ================= */
 
 .videos{
+    background:#e5e1d5;
+}
+
+.video-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:22px;
 }
 
 .video-card{
-    background:#f2efe7;
-    border:1px solid #d0d1c8;
-    transition:.4s;
+    background:#f3f0e8;
+    padding:10px;
+    border:1px solid rgba(37,43,35,.07);
+    transition:.35s ease;
 }
 
 .video-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(30,38,30,.12);
+    transform:translateY(-5px);
 }
 
 .video-card video{
     width:100%;
+    height:auto;
     aspect-ratio:16/9;
+    object-fit:cover;
     display:block;
-    background:#222;
+    background:#252b23;
 }
 
 .video-info{
-    padding:18px;
+    padding:13px 8px 6px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.video-info small{
-    color:#78866c;
-    letter-spacing:2px;
+.video-info span:first-child{
+    font-size:11px;
+    font-weight:600;
+    color:#3e463a;
+}
+
+.video-info span:last-child{
     font-size:9px;
-}
-
-.video-info p{
-    margin-top:5px;
-    font-size:14px;
+    letter-spacing:1px;
+    color:#8a9085;
 }
 
 
-/* PACKAGING */
-
-.pack{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:80px;
-}
-
-.pack-title{
-    font-family:Georgia,serif;
-    font-size:clamp(42px,5vw,65px);
-    line-height:1;
-}
-
-.pack-text p{
-    color:#626960;
-    margin-bottom:23px;
-    font-size:15px;
-}
-
-
-/* ADVANTAGE */
+/* ================= ADVANTAGE ================= */
 
 .advantage{
-    text-align:center;
+    background:#f3f0e8;
 }
 
-.advantage .section-top{
-    justify-content:center;
+.advantage-box{
+    max-width:800px;
+    padding:38px 0;
+    border-top:1px solid #c9c9bd;
+    border-bottom:1px solid #c9c9bd;
 }
 
-.advantage-text{
-    max-width:950px;
-    margin:auto;
-    font-family:Georgia,serif;
-    font-size:clamp(25px,3vw,40px);
-    line-height:1.5;
+.advantage-box h3{
+    font-size:29px;
+    margin-bottom:14px;
+}
+
+.advantage-box p{
+    max-width:700px;
+
+    font-family:'DM Sans',sans-serif;
+    font-size:13px;
+    line-height:1.9;
+
+    color:#686e65;
 }
 
 
-/* BUSINESS */
+/* ================= PACKAGING ================= */
+
+.packaging-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.packaging-card{
+    padding:36px;
+    border:1px solid rgba(37,43,35,.1);
+}
+
+.packaging-card h3{
+    font-size:26px;
+    margin-bottom:13px;
+}
+
+.packaging-card p{
+    color:#686e65;
+    font-size:13px;
+    line-height:1.85;
+}
+
+
+/* ================= BUSINESS ================= */
 
 .business{
+    background:#293126;
+    color:#f3f0e8;
+}
+
+.business .section-title{
+    color:#f3f0e8;
+}
+
+.business-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    border-top:1px solid #c4c7bd;
-    border-left:1px solid #c4c7bd;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
 .business-card{
-    min-height:230px;
-    padding:30px;
-    border-right:1px solid #c4c7bd;
-    border-bottom:1px solid #c4c7bd;
-    transition:.4s;
+    border:1px solid rgba(243,240,232,.14);
+    padding:29px;
+    transition:.35s ease;
 }
 
 .business-card:hover{
-    background:#e8e6dc;
-}
-
-.business-card small{
-    color:#78866c;
-    letter-spacing:2px;
-    font-size:9px;
+    transform:translateY(-5px);
+    border-color:rgba(243,240,232,.3);
 }
 
 .business-card h3{
-    font-family:Georgia,serif;
     font-size:23px;
-    font-weight:500;
-    margin:35px 0 10px;
+    margin-bottom:9px;
 }
 
 .business-card p{
-    color:#666c63;
-    font-size:13px;
-}
-
-.big{
-    font-family:Georgia,serif;
-    font-size:28px;
+    color:#c8cbbf;
+    font-size:12px;
+    line-height:1.8;
 }
 
 
-/* CONCLUSION */
+/* ================= CONCLUSION ================= */
 
 .conclusion{
-    display:grid;
-    grid-template-columns:.7fr 1.3fr;
-    gap:80px;
+    max-width:850px;
+    margin:auto;
 }
 
-.conclusion-text p{
-    font-family:Georgia,serif;
-    font-size:23px;
-    line-height:1.65;
-    margin-bottom:28px;
+.conclusion p{
+    max-width:760px;
+
+    font-family:'DM Sans',sans-serif;
+    font-size:13px;
+    line-height:1.95;
+
+    color:#686e65;
+    margin-bottom:17px;
 }
 
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#e5e1d5;
+}
 
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
-.contact-card{
-    padding:40px 35px;
-    border-top:1px solid rgba(255,255,255,.15);
-    transition:.4s;
+.contact-person{
+    background:#f3f0e8;
+    padding:35px;
+    border:1px solid rgba(37,43,35,.09);
+    transition:.35s ease;
 }
 
-.contact-card:first-child{
-    border-right:1px solid rgba(255,255,255,.15);
+.contact-person:hover{
+    transform:translateY(-5px);
 }
 
-.contact-card:hover{
-    background:#303a30;
+.contact-person h3{
+    font-size:29px;
+    margin-bottom:3px;
 }
 
-.contact-card small{
-    color:#aab6a1;
-    letter-spacing:3px;
-    font-size:9px;
+.contact-role{
+    font-size:10px;
+    letter-spacing:1.5px;
+    color:#7b866f;
+    margin-bottom:23px;
 }
 
-.contact-card h3{
-    font-family:Georgia,serif;
-    font-size:27px;
-    font-weight:500;
-    margin:15px 0 8px;
+.contact-link{
+    display:block;
+    width:max-content;
+    max-width:100%;
+    margin-top:9px;
+
+    font-size:12px;
+    color:#62695d;
+
+    border-bottom:1px solid #aeb5a5;
+    padding-bottom:2px;
+
+    transition:.3s ease;
 }
 
-.contact-card a{
-    text-decoration:none;
-    color:#c5cdc0;
-    font-size:14px;
-}
-
-.contact-card a:hover{
-    color:white;
+.contact-link:hover{
+    color:#293126;
+    transform:translateX(4px);
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-    padding:30px 8%;
-    background:#171e17;
-    color:#899285;
+    padding:32px 8%;
+    background:#20271e;
+    color:#bfc3b7;
+
     display:flex;
     justify-content:space-between;
+    gap:20px;
+
     font-size:10px;
-    letter-spacing:1px;
+    letter-spacing:.3px;
 }
 
 
-/* ANIMATION */
+/* ================= SCROLL EFFECT ================= */
 
-@keyframes down{
-    from{
-        opacity:0;
-        transform:translateY(-20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:
+        opacity .75s ease,
+        transform .75s cubic-bezier(.2,.7,.2,1);
 }
 
-@keyframes appear{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 
-/* MOBILE */
+/* ================= RESPONSIVE ================= */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
     nav{
         padding:0 6%;
     }
 
-    nav div:last-child{
+    .nav-links{
         display:none;
     }
 
     section{
-        padding:80px 7%;
+        padding:80px 6%;
     }
 
     .hero{
-        padding:130px 7% 90px;
+        padding:125px 6% 90px;
     }
 
     .hero h1{
-        font-size:80px;
-        letter-spacing:-5px;
+        font-size:70px;
+        letter-spacing:-3px;
     }
 
-    .hero p{
-        font-size:15px;
+    .hero-desc{
+        font-size:13px;
+        max-width:500px;
     }
 
-    .hero-info{
-        gap:20px;
-        flex-wrap:wrap;
+    .quick-contact{
+        position:static;
+        margin-top:55px;
     }
 
-    .product,
-    .pack,
-    .conclusion{
-        grid-template-columns:1fr;
-        gap:45px;
-    }
-
-    .product-photo img{
-        height:450px;
-    }
-
-    .team,
-    .materials,
-    .concepts,
-    .videos,
+    .identity-grid,
+    .product-grid,
+    .packaging-grid,
     .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .person:nth-child(odd){
-        border-right:none;
-    }
-
-    .material:nth-child(odd){
-        margin-right:0;
-    }
-
-    .concept{
-        border-right:none;
-        border-bottom:1px solid #bdc0b6;
-    }
-
-    .concept:last-child{
-        border-bottom:none;
-    }
-
-    .gallery{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-item:first-child{
-        grid-row:auto;
-    }
-
-    .gallery-item img{
-        min-height:330px;
-    }
-
-    .business{
+    .concept-grid,
+    .materials-grid,
+    .business-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .contact-card:first-child{
-        border-right:none;
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item img{
+        height:350px;
     }
 
     footer{
         flex-direction:column;
-        gap:10px;
     }
 }
 
-@media(max-width:550px){
+
+@media(max-width:520px){
 
     .hero h1{
-        font-size:67px;
+        font-size:58px;
     }
 
-    .section-top{
-        display:block;
-    }
-
-    .section-top .num{
-        display:block;
-        margin-bottom:15px;
-    }
-
-    .business{
+    .concept-grid,
+    .materials-grid,
+    .business-grid,
+    .process-grid,
+    .video-grid{
         grid-template-columns:1fr;
     }
 
-    .step{
-        grid-template-columns:55px 1fr;
-        gap:15px;
+    .section-title{
+        font-size:45px;
     }
 
-    .product-photo img{
-        height:360px;
+    .info-card,
+    .packaging-card,
+    .contact-person{
+        padding:28px;
     }
 
     .gallery-item img{
-        min-height:270px;
+        height:300px;
     }
 }
 
@@ -782,13 +816,12 @@ footer{
         ZERO COST
     </div>
 
-    <div>
-        <a href="#about">ABOUT</a>
-        <a href="#product">PRODUCT</a>
-        <a href="#process">PROCESS</a>
-        <a href="#gallery">GALLERY</a>
-        <a href="#business">BUSINESS</a>
-        <a href="#contact">CONTACT</a>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#product">Product</a>
+        <a href="#process">Process</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#business">Business</a>
     </div>
 
 </nav>
@@ -798,27 +831,42 @@ footer{
 
 <header class="hero">
 
-    <div class="hero-inner">
+    <div class="hero-content reveal">
 
         <div class="eyebrow">
             PKWU PROJECT • SMAN 6 DENPASAR
         </div>
 
         <h1>
-            ZERO<br>COST
+            ZERO<br>
+            <span>COST.</span>
         </h1>
 
-        <p>
+        <p class="hero-desc">
             Sebuah proyek sederhana yang mengubah barang-barang bekas
             menjadi produk yang memiliki fungsi, nilai estetika,
             dan nilai ekonomi.
         </p>
 
-        <div class="hero-info">
-            <span>HANDMADE</span>
-            <span>REUSE</span>
-            <span>ECO PRODUCT</span>
-            <span>2026</span>
+        <div class="hero-line"></div>
+
+
+        <!-- QUICK CONTACT -->
+
+        <div class="quick-contact">
+
+            <div class="quick-label">
+                PROJECT CONTACT
+            </div>
+
+            <a href="#kadek" class="quick-person">
+                Kadek Permana Adiatmika · Absen 16
+            </a>
+
+            <a href="#putu" class="quick-person">
+                Putu Aby Yogiswara · Absen 29
+            </a>
+
         </div>
 
     </div>
@@ -826,81 +874,54 @@ footer{
 </header>
 
 
-<!-- TEAM -->
+<!-- IDENTITY -->
 
-<section class="dark" id="about">
+<section id="about" class="identity">
 
-    <div class="section-top">
+    <div class="reveal">
 
-        <div class="num">
-            01 — TEAM
+        <div class="section-label">
+            01 — THE PEOPLE
         </div>
 
-        <h2>
-            Project Identity
+        <h2 class="section-title">
+            Who made it?
         </h2>
 
-    </div>
+        <div class="identity-grid">
+
+            <div class="info-card">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    Kadek Permana Adiatmika
+                </h3>
+
+                <p>Absen 16</p>
+                <p>XII F3 IPA</p>
+                <p>SMAN 6 Denpasar</p>
+
+            </div>
 
 
-    <div class="team">
+            <div class="info-card">
 
-        <div class="person">
+                <div class="number">
+                    02
+                </div>
 
-            <small>MEMBER / 01</small>
+                <h3>
+                    Putu Aby Yogiswara
+                </h3>
 
-            <h3>
-                Kadek Permana Adiatmika
-            </h3>
+                <p>Absen 29</p>
+                <p>XII F3 IPA</p>
+                <p>SMAN 6 Denpasar</p>
 
-            <p>
-                Absen 16 • XII F3 IPA
-            </p>
-
-        </div>
-
-
-        <div class="person">
-
-            <small>MEMBER / 02</small>
-
-            <h3>
-                Putu Aby Yogiswara
-            </h3>
-
-            <p>
-                Absen 29 • XII F3 IPA
-            </p>
-
-        </div>
-
-
-        <div class="person">
-
-            <small>SCHOOL</small>
-
-            <h3>
-                SMAN 6 Denpasar
-            </h3>
-
-            <p>
-                PKWU Project
-            </p>
-
-        </div>
-
-
-        <div class="person">
-
-            <small>PROJECT</small>
-
-            <h3>
-                Zero Cost
-            </h3>
-
-            <p>
-                Reuse Product
-            </p>
+            </div>
 
         </div>
 
@@ -913,41 +934,17 @@ footer{
 
 <section id="product">
 
-    <div class="section-top">
-
-        <div class="num">
-            02 — PRODUCT
-        </div>
-
-        <h2>
-            The Product
-        </h2>
-
-    </div>
-
-
-    <div class="product">
-
-        <div class="product-photo">
-
-            <img
-                src="IMG-20260902-WA0032.jpg"
-                alt="Produk Zero Cost"
-            >
-
-        </div>
-
+    <div class="product-grid reveal">
 
         <div class="product-text">
 
-            <small>
-                ZERO COST / 001
-            </small>
+            <div class="section-label">
+                02 — THE PRODUCT
+            </div>
 
-            <h3>
-                From Waste<br>
-                To Function.
-            </h3>
+            <h2 class="section-title">
+                Zero Cost
+            </h2>
 
             <p>
                 Zero Cost adalah tempat pensil atau organizer alat tulis
@@ -965,11 +962,23 @@ footer{
             </div>
 
             <div class="tags">
+
                 <div class="tag">HANDMADE</div>
                 <div class="tag">REUSE</div>
                 <div class="tag">ECO PRODUCT</div>
                 <div class="tag">STATIONERY</div>
+
             </div>
+
+        </div>
+
+
+        <div class="product-image">
+
+            <img
+                src="IMG-20260902-WA0032.jpg"
+                alt="Zero Cost Product"
+            >
 
         </div>
 
@@ -980,61 +989,61 @@ footer{
 
 <!-- CONCEPT -->
 
-<section class="light">
+<section class="concept">
 
-    <div class="section-top">
+    <div class="reveal">
 
-        <div class="num">
-            03 — CONCEPT
+        <div class="section-label">
+            03 — THE IDEA
         </div>
 
-        <h2>
-            Three Ideas
+        <h2 class="section-title">
+            Simple idea.<br>
+            Real value.
         </h2>
 
-    </div>
+        <div class="concept-grid">
+
+            <div class="concept-card">
+
+                <div class="number">01</div>
+
+                <h3>Reuse</h3>
+
+                <p>
+                    Menggunakan kembali barang yang sebelumnya
+                    dianggap sudah tidak terpakai.
+                </p>
+
+            </div>
 
 
-    <div class="concepts">
+            <div class="concept-card">
 
-        <div class="concept">
+                <div class="number">02</div>
 
-            <span>01</span>
+                <h3>Function</h3>
 
-            <h3>Reuse</h3>
+                <p>
+                    Mengubah barang bekas menjadi benda yang
+                    memiliki fungsi dalam kehidupan sehari-hari.
+                </p>
 
-            <p>
-                Menggunakan kembali barang yang sebelumnya dianggap
-                sudah tidak terpakai.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="concept">
+            <div class="concept-card">
 
-            <span>02</span>
+                <div class="number">03</div>
 
-            <h3>Function</h3>
+                <h3>Value</h3>
 
-            <p>
-                Mengubah barang bekas menjadi benda yang memiliki
-                fungsi dalam kehidupan sehari-hari.
-            </p>
+                <p>
+                    Memberikan nilai estetika dan nilai ekonomi
+                    pada material yang sederhana.
+                </p>
 
-        </div>
-
-
-        <div class="concept">
-
-            <span>03</span>
-
-            <h3>Value</h3>
-
-            <p>
-                Memberikan nilai estetika dan nilai ekonomi pada
-                material yang sederhana.
-            </p>
+            </div>
 
         </div>
 
@@ -1043,59 +1052,52 @@ footer{
 </section>
 
 
-<!-- MATERIAL -->
+<!-- MATERIALS -->
 
 <section>
 
-    <div class="section-top">
+    <div class="reveal">
 
-        <div class="num">
-            04 — MATERIAL
+        <div class="section-label">
+            04 — MATERIALS
         </div>
 
-        <h2>
-            What We Used
+        <h2 class="section-title">
+            What we used.
         </h2>
 
-    </div>
+        <div class="materials-grid">
 
+            <div class="material">
+                <strong>Used Newspaper</strong>
+                <span>Bekas</span>
+            </div>
 
-    <div class="materials">
+            <div class="material">
+                <strong>Used Rattan</strong>
+                <span>Bekas</span>
+            </div>
 
-        <div class="material">
-            <div class="material-number">01</div>
-            <div class="material-name">Used Newspaper</div>
-            <div class="material-type">BEKAS</div>
-        </div>
+            <div class="material">
+                <strong>Used Can</strong>
+                <span>Bekas</span>
+            </div>
 
-        <div class="material">
-            <div class="material-number">02</div>
-            <div class="material-name">Used Rattan</div>
-            <div class="material-type">BEKAS</div>
-        </div>
+            <div class="material">
+                <strong>Ketapang Leaves</strong>
+                <span>Natural</span>
+            </div>
 
-        <div class="material">
-            <div class="material-number">03</div>
-            <div class="material-name">Used Can</div>
-            <div class="material-type">BEKAS</div>
-        </div>
+            <div class="material">
+                <strong>Fine Beach Sand</strong>
+                <span>Natural</span>
+            </div>
 
-        <div class="material">
-            <div class="material-number">04</div>
-            <div class="material-name">Ketapang Leaves</div>
-            <div class="material-type">NATURAL</div>
-        </div>
+            <div class="material">
+                <strong>Glue</strong>
+                <span>Supporting material</span>
+            </div>
 
-        <div class="material">
-            <div class="material-number">05</div>
-            <div class="material-name">Fine Beach Sand</div>
-            <div class="material-type">NATURAL</div>
-        </div>
-
-        <div class="material">
-            <div class="material-number">06</div>
-            <div class="material-name">Glue</div>
-            <div class="material-type">SUPPORTING</div>
         </div>
 
     </div>
@@ -1105,98 +1107,97 @@ footer{
 
 <!-- PROCESS -->
 
-<section class="dark" id="process">
+<section id="process" class="process">
 
-    <div class="section-top">
+    <div class="reveal">
 
-        <div class="num">
-            05 — PROCESS
+        <div class="section-label">
+            05 — THE PROCESS
         </div>
 
-        <h2>
-            How It Was Made
+        <h2 class="section-title">
+            How we made it.
         </h2>
 
-    </div>
+        <div class="process-grid">
 
+            <div class="step">
 
-    <div class="steps">
+                <div class="step-number">01</div>
 
-        <div class="step">
-
-            <div class="step-number">01</div>
-
-            <div>
-                <h3>Preparing the Glass</h3>
+                <h3>
+                    Preparing the Glass
+                </h3>
 
                 <p>
                     Menyiapkan gelas kaca bekas dan membersihkannya
                     sebelum digunakan.
                 </p>
+
             </div>
 
-        </div>
 
+            <div class="step">
 
-        <div class="step">
+                <div class="step-number">02</div>
 
-            <div class="step-number">02</div>
-
-            <div>
-                <h3>Wrapping the Rattan</h3>
+                <h3>
+                    Wrapping the Rattan
+                </h3>
 
                 <p>
                     Sekitar 70% bagian luar gelas dilapisi
-                    menggunakan rotan bekas.
+                    rotan bekas.
                 </p>
+
             </div>
 
-        </div>
 
+            <div class="step">
 
-        <div class="step">
+                <div class="step-number">03</div>
 
-            <div class="step-number">03</div>
-
-            <div>
-                <h3>Adding the Sand</h3>
+                <h3>
+                    Adding the Sand
+                </h3>
 
                 <p>
-                    Bagian yang tersisa diberi pasir pantai halus
-                    hingga mencapai bagian tengah.
+                    Bagian yang tersisa diberi pasir pantai
+                    halus hingga mencapai bagian tengah.
                 </p>
+
             </div>
 
-        </div>
 
+            <div class="step">
 
-        <div class="step">
+                <div class="step-number">04</div>
 
-            <div class="step-number">04</div>
-
-            <div>
-                <h3>Interior Filling</h3>
+                <h3>
+                    Interior Filling
+                </h3>
 
                 <p>
-                    Pasir ditempatkan pada bagian dalam area yang
-                    tersisa untuk membentuk karakter produk.
+                    Pasir ditempatkan pada bagian dalam area
+                    yang tersisa untuk membentuk karakter produk.
                 </p>
+
             </div>
 
-        </div>
 
+            <div class="step">
 
-        <div class="step">
+                <div class="step-number">05</div>
 
-            <div class="step-number">05</div>
-
-            <div>
-                <h3>Finishing</h3>
+                <h3>
+                    Finishing
+                </h3>
 
                 <p>
-                    Produk diperiksa kembali dan dapat ditambahkan
+                    Produk diperiksa dan dapat ditambahkan
                     dekorasi tambahan.
                 </p>
+
             </div>
 
         </div>
@@ -1210,495 +1211,8 @@ footer{
 
 <section id="gallery">
 
-    <div class="section-top">
+    <div class="reveal">
 
-        <div class="num">
+        <div class="section-label">
             06 — FINAL RESULT
-        </div>
-
-        <h2>
-            The Product
-        </h2>
-
-    </div>
-
-
-    <div class="gallery">
-
-        <div class="gallery-item">
-            <img
-                src="IMG-20260901-WA0026.jpg"
-                alt="Zero Cost Product"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="IMG-20260901-WA0028.jpg"
-                alt="Zero Cost Product"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="IMG-20260902-WA0031.jpg"
-                alt="Zero Cost Product"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="IMG-20260902-WA0032.jpg"
-                alt="Zero Cost Product"
-            >
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- VIDEOS -->
-
-<section class="light">
-
-    <div class="section-top">
-
-        <div class="num">
-            07 — DOCUMENTATION
-        </div>
-
-        <h2>
-            Behind The Process
-        </h2>
-
-    </div>
-
-
-    <div class="videos">
-
-
-        <div class="video-card">
-
-            <video controls preload="metadata">
-                <source
-                    src="VID-20260901-WA0014.mp4"
-                    type="video/mp4"
-                >
-            </video>
-
-            <div class="video-info">
-                <small>DOCUMENTATION / 01</small>
-                <p>Process Documentation</p>
-            </div>
-
-        </div>
-
-
-        <div class="video-card">
-
-            <video controls preload="metadata">
-                <source
-                    src="VID-20260901-WA0015.mp4"
-                    type="video/mp4"
-                >
-            </video>
-
-            <div class="video-info">
-                <small>DOCUMENTATION / 02</small>
-                <p>Process Documentation</p>
-            </div>
-
-        </div>
-
-
-        <div class="video-card">
-
-            <video controls preload="metadata">
-                <source
-                    src="VID-20260901-WA0016.mp4"
-                    type="video/mp4"
-                >
-            </video>
-
-            <div class="video-info">
-                <small>DOCUMENTATION / 03</small>
-                <p>Process Documentation</p>
-            </div>
-
-        </div>
-
-
-        <div class="video-card">
-
-            <video controls preload="metadata">
-                <source
-                    src="VID-20260901-WA0017.mp4"
-                    type="video/mp4"
-                >
-            </video>
-
-            <div class="video-info">
-                <small>DOCUMENTATION / 04</small>
-                <p>Process Documentation</p>
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- PACKAGING -->
-
-<section>
-
-    <div class="section-top">
-
-        <div class="num">
-            08 — PACKAGING
-        </div>
-
-        <h2>
-            Packaging
-        </h2>
-
-    </div>
-
-
-    <div class="pack">
-
-        <div class="pack-title">
-            Packaging<br>
-            With Purpose.
-        </div>
-
-
-        <div class="pack-text">
-
-            <p>
-                Kemasan menggunakan kaleng Kong Guan bekas lengkap
-                dengan tutupnya yang dilapisi koran bekas.
-            </p>
-
-            <p>
-                Bagian dalam kaleng menggunakan potongan-potongan
-                kertas bekas sebagai bantalan untuk mengurangi
-                pergerakan dan benturan produk selama penyimpanan
-                atau pengemasan.
-            </p>
-
-            <p>
-                Daun ketapang juga direncanakan sebagai tambahan
-                dekorasi pada bagian luar kemasan.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ADVANTAGE -->
-
-<section class="dark advantage">
-
-    <div class="section-top">
-
-        <div class="num">
-            09 — ADVANTAGE
-        </div>
-
-    </div>
-
-
-    <div class="advantage-text">
-
-        Keunggulan utama Zero Cost adalah pemanfaatan kembali
-        material bekas dari berbagai sumber untuk menghasilkan
-        produk yang memiliki fungsi dan nilai jual.
-
-    </div>
-
-</section>
-
-
-<!-- BUSINESS -->
-
-<section id="business">
-
-    <div class="section-top">
-
-        <div class="num">
-            10 — BUSINESS
-        </div>
-
-        <h2>
-            Business Plan
-        </h2>
-
-    </div>
-
-
-    <div class="business">
-
-
-        <div class="business-card">
-
-            <small>01 / CAPITAL</small>
-
-            <h3>Initial Capital</h3>
-
-            <div class="big">
-                Rp5.000
-            </div>
-
-            <p>
-                Modal utama digunakan untuk bahan pendukung
-                seperti lem.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>02 / COST</small>
-
-            <h3>HPP</h3>
-
-            <div class="big">
-                ± Rp5.000
-            </div>
-
-            <p>
-                Perkiraan harga pokok produksi.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>03 / PRICE</small>
-
-            <h3>Selling Price</h3>
-
-            <div class="big">
-                Rp35.000
-            </div>
-
-            <p>
-                Harga jual satu produk Zero Cost.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>04 / PROFIT</small>
-
-            <h3>Estimated Profit</h3>
-
-            <div class="big">
-                ± Rp30.000
-            </div>
-
-            <p>
-                Perkiraan keuntungan dari setiap produk.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>05 / MARKET</small>
-
-            <h3>Target Market</h3>
-
-            <p>
-                Pelajar sekolah yang membutuhkan tempat pensil
-                atau organizer alat tulis.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>06 / MARKETING</small>
-
-            <h3>Marketing</h3>
-
-            <p>
-                Instagram, WhatsApp, promosi langsung kepada
-                teman sekolah, serta konten foto dan video proses.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>07 / POTENTIAL</small>
-
-            <h3>Potential</h3>
-
-            <p>
-                Produk handmade berbasis reuse dapat dikembangkan
-                melalui variasi desain dan dekorasi.
-            </p>
-
-        </div>
-
-
-        <div class="business-card">
-
-            <small>08 / IDEA</small>
-
-            <h3>Product Idea</h3>
-
-            <p>
-                Menggabungkan fungsi, estetika, kreativitas,
-                dan pemanfaatan barang bekas.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- CONCLUSION -->
-
-<section class="light">
-
-    <div class="section-top">
-
-        <div class="num">
-            11 — CONCLUSION
-        </div>
-
-        <h2>
-            More Than Waste.
-        </h2>
-
-    </div>
-
-
-    <div class="conclusion">
-
-        <div></div>
-
-        <div class="conclusion-text">
-
-            <p>
-                Zero Cost menunjukkan bahwa barang bekas tidak selalu
-                berakhir sebagai sampah. Dengan kreativitas dan proses
-                sederhana, material yang sudah tidak digunakan dapat
-                diubah menjadi produk yang memiliki fungsi, nilai
-                estetika, dan nilai ekonomi.
-            </p>
-
-            <p>
-                Melalui proyek ini, barang-barang bekas dari aspek
-                organik dan anorganik dimanfaatkan kembali menjadi
-                sebuah produk yang lebih bermakna dan bernilai.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="dark" id="contact">
-
-    <div class="section-top">
-
-        <div class="num">
-            12 — CONTACT
-        </div>
-
-        <h2>
-            Get In Touch.
-        </h2>
-
-    </div>
-
-
-    <div class="contact-grid">
-
-
-        <div class="contact-card">
-
-            <small>
-                INSTAGRAM
-            </small>
-
-            <h3>
-                @pertigaanbelokkan9
-            </h3>
-
-            <a
-                href="https://instagram.com/pertigaanbelokkan9"
-                target="_blank"
-            >
-                Visit Instagram →
-            </a>
-
-        </div>
-
-
-        <div class="contact-card">
-
-            <small>
-                WHATSAPP
-            </small>
-
-            <h3>
-                0878-2267-5914
-            </h3>
-
-            <a
-                href="https://wa.me/6287822675914"
-                target="_blank"
-            >
-                Chat on WhatsApp →
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div>
-        ZERO COST — PKWU PROJECT
-    </div>
-
-    <div>
-        Kadek Permana Adiatmika • Putu Aby Yogiswara
-    </div>
-
-</footer>
-
-
-</body>
-</html>
+   
